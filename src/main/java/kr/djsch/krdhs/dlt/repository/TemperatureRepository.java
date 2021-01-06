@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface TemperatureRepository extends JpaRepository<Temperature, Long> {
-    List<Temperature> findTop20ByStudent(Student student);
+    List<Temperature> findTop20ByStudentOrderByDateDesc(Student student);
 }

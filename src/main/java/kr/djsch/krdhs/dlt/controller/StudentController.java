@@ -83,7 +83,7 @@ public class StudentController {
         model.addAttribute("grade", Long.parseLong(grade));
         model.addAttribute("group", Long.parseLong(group));
         model.addAttribute("student", studentRepository.findById(Long.parseLong(id)).get());
-        model.addAttribute("data", temperatureRepository.findTop20ByStudent(student));
+        model.addAttribute("data", temperatureRepository.findTop20ByStudentOrderByDateDesc(student));
         return "detail";
     }
 }

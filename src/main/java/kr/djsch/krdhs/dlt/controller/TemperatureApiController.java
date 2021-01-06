@@ -34,7 +34,7 @@ public class TemperatureApiController {
 
     @GetMapping("/temperature/student/{student}")
     List<Temperature> studentAll(@PathVariable Student student) {
-        return repository.findTop20ByStudent(student);
+        return repository.findTop20ByStudentOrderByDateDesc(student);
     }
 
     @DeleteMapping("/temperature/{id}")
